@@ -33,8 +33,8 @@ function SetupBanner() {
           {" "}→ projeto → <strong>Settings → API</strong> (copie URL + anon key)
         </li>
         <li>
-          <strong>Vercel</strong> → projeto TimeClockAra → Settings → Environment Variables → cole{" "}
-          <code>VITE_SUPABASE_URL</code> e <code>VITE_SUPABASE_ANON_KEY</code> → Redeploy
+          <strong>Vercel</strong> → Environment Variables → <code>VITE_SUPABASE_URL</code> +{" "}
+          <code>VITE_SUPABASE_PUBLISHABLE_KEY</code> (sua <code>sb_publishable_...</code>) → Redeploy
         </li>
         <li>
           Git ligado? <strong>Database → Migrations</strong> no Supabase aplica o SQL do repo automaticamente
