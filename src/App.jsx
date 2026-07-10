@@ -24,20 +24,18 @@ function SetupBanner() {
   if (supabaseConfigured) return null;
   return (
     <div className="setup-banner">
-      <p className="setup-banner__lead">☁️ Falta conectar o Supabase (5 min)</p>
+      <p className="setup-banner__lead">☁️ Supabase não conectou neste deploy</p>
       <ol className="setup-banner__steps">
         <li>
-          <a href="https://supabase.com/dashboard" target="_blank" rel="noreferrer">
-            supabase.com/dashboard
-          </a>
-          {" "}→ projeto → <strong>Settings → API</strong> (copie URL + anon key)
+          Integração ligada? Na <strong>Vercel</strong> → projeto → <strong>Deployments</strong> →{" "}
+          <strong>Redeploy</strong> (as variáveis só entram no <em>build</em>)
         </li>
         <li>
-          <strong>Vercel</strong> → Environment Variables → <code>VITE_SUPABASE_URL</code> +{" "}
-          <code>VITE_SUPABASE_PUBLISHABLE_KEY</code> (sua <code>sb_publishable_...</code>) → Redeploy
+          Confira <strong>Settings → Environment Variables</strong>: precisa ter URL + publishable (
+          <code>SUPABASE_URL</code> ou <code>NEXT_PUBLIC_SUPABASE_URL</code>)
         </li>
         <li>
-          Git ligado? <strong>Database → Migrations</strong> no Supabase aplica o SQL do repo automaticamente
+          Supabase → <strong>Integrations → Vercel</strong> → confirme que o projeto certo está conectado
         </li>
       </ol>
     </div>
